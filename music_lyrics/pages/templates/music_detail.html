@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% endblock title %}
+{% block navbar %}
+    <a class="nav-link" href="{% url 'music_edit' page.pk %}" id="musicPage">Edit Music |</a>
+    <a class="nav-link" href="{% url 'music_delete' page.pk %}" id="musicPage">Delete Music |</a>
+{% endblock navbar %}
+
+{% block content %}
+<div class="music-video-container">
+    {{ page.video_url|safe }}
+  </div>
+<div class="lyrics-container">
+    <h4>{{ page.title }}</h4>
+    <br>
+    {{ page.lyrics|safe|linebreaksbr }}
+</div>
+{% endblock content %}
+
+page.video_url|safe =           # passing in the html tags
+page.lyrics|make_list
+page.lyrics|length              # get the length of the string
+page.lyrics|linebreaks          # make a new line
+page.lyrics|linebreaksbr        # make a new line using break
