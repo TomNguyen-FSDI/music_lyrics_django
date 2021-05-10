@@ -16,9 +16,3 @@
     {{ page.lyrics|safe|linebreaksbr }}
 </div>
 {% endblock content %}
-
-page.video_url|safe =           # passing in the html tags
-page.lyrics|make_list
-page.lyrics|length              # get the length of the string
-page.lyrics|linebreaks          # make a new line
-page.lyrics|linebreaksbr        # make a new line using break
