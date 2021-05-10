@@ -7,9 +7,9 @@ music
 <main class="container">
     {% for page in object_list %}
         {% if page.user == 'baby' %}
-            <p><a class="a-link-title" href="{% url 'music_detail' page.pk %}">{{ page.title }}</a></p>
+            <p><a class="a-link-title text-capitalize text-decoration-none" href="{% url 'music_detail' page.pk %}">{{ page.title }}</a></p>
         {% elif page.user == 'both' %}
-            <p><a class="a-link-title" href="{% url 'music_detail' page.pk %}">{{ page.title }}</a></p>
+            <p><a class="a-link-title text-capitalize text-decoration-none" href="{% url 'music_detail' page.pk %}">{{ page.title }}</a></p>
         {% endif %}
     {% endfor %}
 </main>
