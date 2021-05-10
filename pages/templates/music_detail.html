@@ -1,58 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}{{ page.title }}{% endblock title %}
-{% block css %}
-<style>
-.man{
-    color:blue;
-}
-.woman{
-    color:crimson;
-}
-.both{
-    color:darkmagenta;
-}
-.music-video-container{
-    /* max-width: 90%; */
-    width: 300;
-    height: 200;
-    margin: 10px auto;
-    /* padding: 10px 20px; */
-    background: #f4f7f8;
-    border-radius: 8px;
-    z-index: -3;
-    
-}
-/* The music video player*/
-.music-video-container iframe{
-    width: 400px;
-    height: 300px;
-    margin: 0 auto;
-    right: 0;
-    bottom: 0;
-    position  : fixed ;
-    /* top : 100px; */
-    display:block;
-}
-.lyrics-container{
-    /* padding-top: 600px; */
-    /* text-align: center; */
-    padding-bottom: 400px;
-    padding-left: 100px;
-}
-.lyrics-container p{
-    display:inline-block;
-    text-align:left;
-}
-
-@media (min-width:1399px){
-    .music-video-container iframe{
-        width: 1000px;
-        height: 700px;
-    }
-}
-</style>
-{% endblock css %}
+{% block css %}{% endblock css %}
 
 {% block navbar %}
     <a class="nav-link" href="{% url 'music_edit' page.pk %}" id="musicPage">Edit Music |</a>
