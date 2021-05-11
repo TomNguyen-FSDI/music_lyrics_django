@@ -1,0 +1,22 @@
+
+.main-product-container{
+    width:200px;
+    height:100px;
+    /* height: 10px; */
+    /* width: 10px; */
+    margin: 3px 5px;
+    border-radius: 9px;
+    border: 1px solid grey;
+    padding: 6px 0 0 6px;
+
+}
+a{
+  text-decoration:none;
+  color: black;  
+}
+.main-product-container:hover{
+    box-shadow: 0px 8px 15px -10px grey;
+}
+.a-link-title{
+    text-transform: capitalize;
+}
